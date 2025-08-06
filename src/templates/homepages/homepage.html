@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %} INICIO {% endblock titulo %}
+
+{% block contenido %}
+
+<style>
+    body {
+        background: linear-gradient(to right, #052339 35%, #039189 75%, #00ffd9 100%);
+    }
+
+    .presentacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    .presentacion__img {
+        max-width: 30rem;
+        max-height: 110rem;
+        border-radius: 20px;
+        margin-right: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .presentacion__container {
+        text-align: left;
+    }
+
+    .presentacion__container--h2 {
+        color: #00ffd9;
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .presentacion__container--p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+
+    .enlaces {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .btn {
+        background-color: #00ffd9;
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+
+<div class="presentacion">
+    <img class="presentacion__img" src="{% static 'img/presentacion.png' %}" alt="servicios" />
+    <div class="presentacion__container">
+        <h2 class="presentacion__container--h2">App de Reservas</h2>
+        <p class="presentacion__container--p">
+            Bienvenido a tu solución para la reserva de servicios para eventos.
+            Desde eventos pequeños hasta celebraciones extravagantes, estamos aquí para hacer que
+            tu experiencia sea inolvidable. Explora nuestros servicios, conoce a nuestro equipo,
+            y reserva con confianza.
+        </p>
+    </div>
+</div>
+
+<div class="enlaces">
+    <a href="{% url 'app_clientes:listado_clientes' %}">
+        <button class="btn">Clientes</button>
+    </a>
+
+    <a href="{% url 'app_reservas:listado_reservas' %}">
+        <button class="btn">Reservas</button>
+    </a>
+
+    <a href="{% url 'app_servicios:listado_servicios' %}">
+        <button class="btn">Servicios</button>
+    </a>
+
+    <a href="{% url 'app_coordinadores:listado_coordinadores' %}">
+        <button class="btn">Coordinadores</button>
+    </a>
+
+    <a href="{% url 'app_empleados:listado_empleados' %}">
+        <button class="btn">Empleados</button>
+    </a>
+</div>
+
+{% endblock contenido %}

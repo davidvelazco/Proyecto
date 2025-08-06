@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block titulo %} PÁGINA DE INICIO APIs{% endblock titulo %}
+
+{% block contenido %}
+
+<h1 align="center">Documentación de las APIS</h1>
+
+<div>
+  <h2>Endpoint: /api/{entidad}/</h2>
+  <p>
+    <strong>Descripción:</strong> Este endpoint devuelve una lista con información resumida de todos los registros del sistema.
+    <br>
+    <strong>Métodos HTTP permitidos:</strong> GET
+    <br>
+    <strong>Parámetros de solicitud:</strong> No se requieren parámetros.
+    <br>
+    <strong>Códigos de estado en caso de éxito:</strong> 200 (OK)
+    <br>
+    <strong>Códigos de estado en caso de error:</strong> 404 (Not Found), 500 (Internal Server Error)
+    <br>
+    <strong>Formato de respuesta:</strong> JSON
+    <br>
+    <strong> Ejemplo:</strong>
+    <pre><code>
+        [
+          {
+            "id": 1,
+            "nombre": "María",
+          },
+          {
+            "id": 2,
+            "nombre": "Juan",
+          }
+        ]
+    </code></pre>
+  </p>
+</div>
+
+        
+<div>
+  <h2>Endpoint: /api/{entidad}/{id}/</h2>
+  <p>
+    <strong>Descripción:</strong> Este endpoint devuelve la información completa de un registro específico.
+    <br>
+    <strong>Métodos HTTP permitidos:</strong> GET
+    <br>
+    <strong>Parámetros de solicitud:</strong> Identificador (ID) del registro que se desea recuperar.
+    <br>
+    <strong>Códigos de estado:</strong> 200 (OK), 404 (Not Found), 500 (Internal Server Error)
+    <br>
+    <strong>Formato de respuesta:</strong> JSON
+    <br>
+    <strong> Ejemplo:</strong>
+    <pre><code>
+        [
+         {
+            "id": 1,
+            "nombre": "María",
+            "apellido": "Perez",
+            "activo": True
+          }
+        ]
+    </code></pre>
+  </p>
+</div>
+
+<div> 
+  <h3>  Consultar las APIs de Cliente</h3>
+  <strong><a href=" http://localhost:8000/api/clientes/" target="_blank">Consultar la API de listar Clientes</a>
+  <br>
+  <strong><a href="http://localhost:8000/api/clientes/12/" target="_blank">Consultar la API que lista un Cliente por su ID</a>
+  <br>
+  <h3>  Consultar las APIs de Empleado</h3>
+  <strong><a href=" http://localhost:8000/api/empleados/" target="_blank">Consultar la API de listar Empleados</a>
+  <br>
+  <strong><a href=" http://localhost:8000/api/empleados/1/" target="_blank">Consultar la API que lista un Empleado por su ID</a>
+  <br>
+  <h3>  Consultar las APIs de Coordinador</h3>
+  <strong><a href=" http://localhost:8000/api/coordinadores/" target="_blank">Consultar la API de listar Coordinadores</a>
+  <br>
+  <strong><a href="http://localhost:8000/api/coordinadores/2/" target="_blank">Consultar la API que lista un Coordinador por su ID</a>
+  <br>
+  <h3>  Consultar las APIs de Servicio</h3>
+  <strong><a href=" http://localhost:8000/api/servicios/" target="_blank">Consultar la API de listar Servicios</a>
+  <br>
+  <strong><a href="http://localhost:8000/api/servicios/12" target="_blank">Consultar la API que lista un Servicio por su ID</a>
+    <br>
+  <h3>  Consultar las APIs de Reserva de Servicio</h3>
+  <strong><a href=" http://localhost:8000/api/reservas/" target="_blank">Consultar la API de listar Reservas de Servicios</a>
+  <br>
+  <strong><a href="http://localhost:8000/api/reservas/5" target="_blank">Consultar la API que lista una Reserva de Servicio por su ID</a>
+</div>
+
+
+{% endblock contenido %}
