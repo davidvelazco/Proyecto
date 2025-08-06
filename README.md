@@ -1,16 +1,11 @@
 # Aplicación Web para Reservas de Servicios para Eventos 
-
-
-
-
-
 ## Descripción del proyecto
 
-Este proyecto fue desarrollado de forma colaborativa como trabajo final del programa de aceleración de talentos de Alkemy, en la especialización en desarrollo web con Python y Django.
+Este proyecto fue desarrollado de forma colaborativa como trabajo final de la 2da etapa del informatorio, en la especialización en desarrollo web con Python y Django.
 
 El proyecto consiste en el desarrollo de una aplicación web **base** y se tenía como caso de negocio una empresa que ofrece reservas de servicios para eventos. 
 
-El trabajo se desarrollo a lo largo de 3 semanas y siguiendo la metodología ágil Scrum. Para el trabajo colaborativo utilizamos Jira, Git y GitHub. 
+El trabajo se desarrollo a lo largo de varias semanas (xd) y siguiendo la metodología ágil Scrum. Para el trabajo colaborativo utilizamos Git y GitHub. 
 
 ## Características Principales
 
@@ -65,5 +60,3 @@ Listado de Rerservas de Servicios con la funcionalidad de eliminar:
 2. Instalar las dependencias: `pip install -r requirements.txt`
 3. Realizar las migraciones de la base de datos: `python manage.py migrate`
 4. Ejecutar la aplicación: `python manage.py runserver`
-
-
