@@ -61,7 +61,7 @@ Listado de Rerservas de Servicios con la funcionalidad de eliminar:
 
 ## Instrucciones de Instalación
 
-1. Clonar este repositorio: `git clone https://github.com/fatimabelen/proyecto_python-django.git`
+1. Clonar este repositorio: `git clone https://github.com/davidvelazco/Proyecto.git`
 2. Instalar las dependencias: `pip install -r requirements.txt`
 3. Realizar las migraciones de la base de datos: `python manage.py migrate`
 4. Ejecutar la aplicación: `python manage.py runserver`
